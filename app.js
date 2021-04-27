@@ -63,7 +63,7 @@ app.get('/lists/:id', (req, res) => {
 })
 
 // Update a list
-app.put('/lists/:id', (req, res) => {
+app.put('/list/:id', (req, res) => {
   var db = req.db;
   list.findById(req.params.id, 'list', function (error, list) {
     if (error) { console.error(error); }
