@@ -65,7 +65,7 @@ app.get('/lists/:id', (req, res) => {
 // Update a list
 app.put('/list/:id', (req, res) => {
   var db = req.db;
-  list.findById(req.params.id, 'list', function (error, list) {
+  List.findById(req.params.id, 'list', function (error, list) {
     if (error) { console.error(error); }
     list.produit = req.body.produit
     list.qty = req.body.qty
