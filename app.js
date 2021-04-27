@@ -71,9 +71,7 @@ app.put('/lists/:id', (req, res) => {
     list.qty = req.body.qty
     list.save(function (error) {
       if (error) {
-        res.send({
-        error: console.log(error)
-      })
+        console.log(error)
       }
       res.send({
         success: true
