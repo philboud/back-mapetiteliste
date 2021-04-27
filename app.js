@@ -22,7 +22,7 @@ app.use(cors())
 
 
 // Fetch all lists
-app.get('/lists', (req, res) => {
+app.get('/list', (req, res) => {
   var laReq = 'produit qty'
   List.find({}, laReq, function (error, profiles) {
     if (error) { console.error(error); }
